@@ -11,4 +11,6 @@
                                       {:description "iPhone"
                                        :price 550
                                        :uom "unit"
-                                       :image-url "iphone.jpeg"}]}}))
+                                       :image-url "iphone.jpeg"}]}
+
+                      :modals {:msg ""}}))

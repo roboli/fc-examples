@@ -3,7 +3,8 @@
             [clerk.core :as cl :refer-macros [defcom-route defrouter]]
             [fc-examples.data :refer [app-state]]
             [fc-examples.common :as cm]
-            [fc-examples.grids :as g :refer [grids]]))
+            [fc-examples.grids :as g :refer [grids]]
+            [fc-examples.modals :as m :refer [modals]]))
 
 (enable-console-print!)
 
@@ -18,6 +19,8 @@
 
 (defcom-route "/" [] home)
 (defcom-route "/grids" [] grids)
+(defcom-route "/modals/methods" [] modals {:opts {:section m/modal-methods}})
+(defcom-route "/modals/events" [] modals {:opts {:section m/modal-events}})
 
 (defrouter my-router app-state (. js/document (getElementById "app")))
 

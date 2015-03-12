@@ -5,4 +5,5 @@
   (render-state [_]
                 (brand "full-control")
                 (link {:href "#/"} "Home")
-                (link {:href "#/grids"} "Grids")))
+                (link {:href "#/grids"} "Grids")
+                (link {:href "#/modals/methods"} "Modals")))
