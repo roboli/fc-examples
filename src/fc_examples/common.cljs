@@ -1,0 +1,8 @@
+(ns fc-examples.common
+  (:require [full-control.core :as fc :refer-macros [defnavbar]]))
+
+(defnavbar main-menu [cursor owner opts]
+  (render-state [_]
+                (brand "full-control")
+                (link {:href "#/"} "Home")
+                (link {:href "#/grids"} "Grids")))
