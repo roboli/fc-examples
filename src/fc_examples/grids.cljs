@@ -13,7 +13,7 @@
                     (p "Some data here...")
                     (stretch
                      (grid-view
-                      (with-source [data (:items (:grids cursor))]
+                      (with-source [data (get-in cursor [:grids :items])]
                         (row
                          (column-12
                           (h3 (:description data))))
@@ -42,7 +42,7 @@
                        (th "U/M")
                        (th "Image"))
                       (tbody
-                       (with-source [data (:items cursor)]
+                       (with-source [data (get-in cursor [:grids :items])]
                          (td (:description data))
                          (td (:price data))
                          (td (:uom data))
