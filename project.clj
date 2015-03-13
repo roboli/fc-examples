@@ -19,8 +19,7 @@
                                         :optimizations :none
                                         :cache-analysis true
                                         :source-map true}}
-                       :prod {:id "fc-examples"
-                              :source-paths ["src"]
+                       :prod {:source-paths ["src"]
                               :compiler {:output-to "app/out/fc_examples.js"
                                          :optimizations :advanced}}}}
 
