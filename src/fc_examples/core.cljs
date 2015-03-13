@@ -6,7 +6,8 @@
             [fc-examples.grids :as g :refer [grids]]
             [fc-examples.modals :as m :refer [modals]]
             [fc-examples.forms :as f :refer [forms]]
-            [fc-examples.tabs :as t :refer [tabs]]))
+            [fc-examples.tabs :as t :refer [tabs]]
+            [fc-examples.pagers :refer [pagers]]))
 
 (enable-console-print!)
 
@@ -27,6 +28,7 @@
 (defcom-route "/forms/state" [] forms {:opts {:section f/state}})
 (defcom-route "/tabs/methods" [] tabs {:opts {:section t/methods}})
 (defcom-route "/tabs/events" [] tabs {:opts {:section t/events}})
+(defcom-route "/pagers" [] pagers)
 
 (defrouter my-router app-state (. js/document (getElementById "app")))
 
