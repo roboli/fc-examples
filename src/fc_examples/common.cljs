@@ -6,4 +6,5 @@
                 (brand "full-control")
                 (link {:href "#/"} "Home")
                 (link {:href "#/grids"} "Grids")
-                (link {:href "#/modals/methods"} "Modals")))
+                (link {:href "#/modals/methods"} "Modals")
+                (link {:href "#/forms/layouts"} "Forms")))

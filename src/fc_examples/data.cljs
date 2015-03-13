@@ -13,4 +13,17 @@
                                        :uom "unit"
                                        :image-url "iphone.jpeg"}]}
 
-                      :modals {:msg ""}}))
+                      :modals {:msg ""}
+
+                      :forms {:brands [{:id 1 :name "Hermex"}
+                                       {:id 2 :name "Stanley"}]
+                              :item {:description "Screw Driver"
+                                     :brand-id 2
+                                     :price 44.5
+                                     :active true
+                                     :comments "Yellow color plastic."
+                                     :extras {:non-taxable false
+                                              :allow-credit false
+                                              :allow-discounts false}
+                                     :type "1"}
+                              :state {:disabled false}}}))

@@ -4,7 +4,8 @@
             [fc-examples.data :refer [app-state]]
             [fc-examples.common :as cm]
             [fc-examples.grids :as g :refer [grids]]
-            [fc-examples.modals :as m :refer [modals]]))
+            [fc-examples.modals :as m :refer [modals]]
+            [fc-examples.forms :as f :refer [forms]]))
 
 (enable-console-print!)
 
@@ -21,6 +22,8 @@
 (defcom-route "/grids" [] grids)
 (defcom-route "/modals/methods" [] modals {:opts {:section m/modal-methods}})
 (defcom-route "/modals/events" [] modals {:opts {:section m/modal-events}})
+(defcom-route "/forms/layouts" [] forms {:opts {:section f/layouts}})
+(defcom-route "/forms/state" [] forms {:opts {:section f/state}})
 
 (defrouter my-router app-state (. js/document (getElementById "app")))
 
