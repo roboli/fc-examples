@@ -1,6 +1,6 @@
 (ns fc-examples.forms
   (:require [full-control.core :as fc :refer-macros [defpage defrow]]
-            [fc-examples.common :as cm]))
+            [fc-examples.common :refer [main-menu]]))
 
 (defrow layouts [cursor owner opts]
   (render-state [_]
@@ -325,7 +325,7 @@
 
 (defpage forms [cursor owner opts]
   (render-state [st]
-                (fc/build cm/main-menu cursor)
+                (fc/build main-menu cursor)
                 (fixed-layout
                  (row
                   (column-9

@@ -1,10 +1,10 @@
 (ns fc-examples.grids
   (:require [full-control.core :as fc :refer-macros [defpage]]
-            [fc-examples.common :as cm]))
+            [fc-examples.common :refer [main-menu]]))
 
 (defpage grids [cursor owner opts]
   (render-state [st]
-                (fc/build cm/main-menu cursor)
+                (fc/build main-menu cursor)
                 (fixed-layout
                  (row
                   (column-12

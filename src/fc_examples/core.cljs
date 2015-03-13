@@ -2,7 +2,7 @@
   (:require [full-control.core :as fc :refer-macros [defpage]]
             [clerk.core :as cl :refer-macros [defcom-route defrouter]]
             [fc-examples.data :refer [app-state]]
-            [fc-examples.common :as cm]
+            [fc-examples.common :refer [main-menu]]
             [fc-examples.grids :as g :refer [grids]]
             [fc-examples.modals :as m :refer [modals]]
             [fc-examples.forms :as f :refer [forms]]))
@@ -11,7 +11,7 @@
 
 (defpage home [cursor owner]
   (render-state [_]
-                (fc/build cm/main-menu cursor)
+                (fc/build main-menu cursor)
                 (fixed-layout
                  (row
                   (column-12
