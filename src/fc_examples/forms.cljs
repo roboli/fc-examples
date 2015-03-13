@@ -184,58 +184,6 @@
   
   (render-state [st]
                 (with-attrs {:column-size :md}
-                  (column-8
-                   (panel
-                    (header (title3 "Form"))
-                    (frm {:disabled (:disabled st)}
-                         (with-record (:item cursor)
-                           (row
-                            (column-6
-                             (group-for {:korks :description
-                                         :validation-state (keyword (get-in st [:description :val-st]))}
-                                        (lbl)
-                                        (txt {:max-length 15
-                                              :disabled (get-in st [:description :disabled])})
-                                        (help "*")))
-                            (column-6
-                             (group-for {:korks :price
-                                         :validation-state (keyword (get-in st [:price :val-st]))}
-                                        (lbl)
-                                        (txt {:max-length 10
-                                              :disabled (get-in st [:price :disabled])})
-                                        (help "*"))))
-                           (row
-                            (column-6
-                             (group-for {:korks :brand-id
-                                         :validation-state (keyword (get-in st [:brand-id :val-st]))}
-                                        (lbl "Brand")
-                                        (dropdown {:disabled (get-in st [:brand-id :disabled])}
-                                                  (with-source [data (:brands cursor)]
-                                                    (option {:value (:id data)} (:name data))))
-                                        (help "*")))
-                            (column-6
-                             (group-for {:korks :comments
-                                         :validation-state (keyword (get-in st [:comments :val-st]))}
-                                        (lbl)
-                                        (txtarea {:disabled (get-in st [:comments :disabled])})
-                                        (help "(optional)"))))
-                           (row
-                            (column-6 {:validation-state (keyword (get-in st [:extras :val-st]))}
-                                      (lbl "Extras")
-                                      (checkbox-for {:korks [:extras :non-taxable]
-                                                     :disabled (get-in st [:extras :disabled])})
-                                      (checkbox-for {:korks [:extras :allow-credit]
-                                                     :disabled (get-in st [:extras :disabled])})
-                                      (checkbox-for {:korks [:extras :allow-discounts]
-                                                     :disabled (get-in st [:extras :disabled])}))
-                            (column-6
-                             (group-for {:korks :type
-                                         :validation-state (keyword (get-in st [:type :val-st]))}
-                                        (lbl)
-                                        (radio {:value "1"
-                                                :disabled (get-in st [:type :disabled])} "Service")
-                                        (radio {:value "2"
-                                                :disabled (get-in st [:type :disabled])} "Asset"))))))))
                   (column-4
                    (panel
                     (header (title3 "Local State"))
@@ -321,7 +269,59 @@
                              (row
                               (column-4)
                               (checkbox-6-for {:korks [:type :disabled]
-                                               :size :sm})))))))))))))
+                                               :size :sm}))))))))))
+                  (column-8
+                   (panel
+                    (header (title3 "Form"))
+                    (frm {:disabled (:disabled st)}
+                         (with-record (:item cursor)
+                           (row
+                            (column-6
+                             (group-for {:korks :description
+                                         :validation-state (keyword (get-in st [:description :val-st]))}
+                                        (lbl)
+                                        (txt {:max-length 15
+                                              :disabled (get-in st [:description :disabled])})
+                                        (help "*")))
+                            (column-6
+                             (group-for {:korks :price
+                                         :validation-state (keyword (get-in st [:price :val-st]))}
+                                        (lbl)
+                                        (txt {:max-length 10
+                                              :disabled (get-in st [:price :disabled])})
+                                        (help "*"))))
+                           (row
+                            (column-6
+                             (group-for {:korks :brand-id
+                                         :validation-state (keyword (get-in st [:brand-id :val-st]))}
+                                        (lbl "Brand")
+                                        (dropdown {:disabled (get-in st [:brand-id :disabled])}
+                                                  (with-source [data (:brands cursor)]
+                                                    (option {:value (:id data)} (:name data))))
+                                        (help "*")))
+                            (column-6
+                             (group-for {:korks :comments
+                                         :validation-state (keyword (get-in st [:comments :val-st]))}
+                                        (lbl)
+                                        (txtarea {:disabled (get-in st [:comments :disabled])})
+                                        (help "(optional)"))))
+                           (row
+                            (column-6 {:validation-state (keyword (get-in st [:extras :val-st]))}
+                                      (lbl "Extras")
+                                      (checkbox-for {:korks [:extras :non-taxable]
+                                                     :disabled (get-in st [:extras :disabled])})
+                                      (checkbox-for {:korks [:extras :allow-credit]
+                                                     :disabled (get-in st [:extras :disabled])})
+                                      (checkbox-for {:korks [:extras :allow-discounts]
+                                                     :disabled (get-in st [:extras :disabled])}))
+                            (column-6
+                             (group-for {:korks :type
+                                         :validation-state (keyword (get-in st [:type :val-st]))}
+                                        (lbl)
+                                        (radio {:value "1"
+                                                :disabled (get-in st [:type :disabled])} "Service")
+                                        (radio {:value "2"
+                                                :disabled (get-in st [:type :disabled])} "Asset")))))))))))
 
 (defpage forms [cursor owner opts]
   (render-state [st]
