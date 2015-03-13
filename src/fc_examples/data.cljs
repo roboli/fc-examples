@@ -44,4 +44,7 @@
                                :pagination {:page 1
                                             :page-size 10
                                             :total-pages 2
-                                            :total-records 13}}}))
+                                            :total-records 13}}
+
+                      :random {:item {:date #inst "2015-10-30"
+                                      :city nil}}}))

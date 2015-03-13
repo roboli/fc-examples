@@ -7,7 +7,8 @@
             [fc-examples.modals :as m :refer [modals]]
             [fc-examples.forms :as f :refer [forms]]
             [fc-examples.tabs :as t :refer [tabs]]
-            [fc-examples.pagers :refer [pagers]]))
+            [fc-examples.pagers :refer [pagers]]
+            [fc-examples.random :refer [random]]))
 
 (enable-console-print!)
 
@@ -29,6 +30,7 @@
 (defcom-route "/tabs/methods" [] tabs {:opts {:section t/methods}})
 (defcom-route "/tabs/events" [] tabs {:opts {:section t/events}})
 (defcom-route "/pagers" [] pagers)
+(defcom-route "/random" [] random)
 
 (defrouter my-router app-state (. js/document (getElementById "app")))
 

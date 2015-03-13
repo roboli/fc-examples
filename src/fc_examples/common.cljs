@@ -9,4 +9,5 @@
                 (link {:href "#/modals/methods"} "Modals")
                 (link {:href "#/forms/layouts"} "Forms")
                 (link {:href "#/tabs/methods"} "Tabs")
-                (link {:href "#/pagers"} "Pager")))
+                (link {:href "#/pagers"} "Pager")
+                (link {:href "#/random"} "Random")))
