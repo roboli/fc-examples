@@ -20,8 +20,8 @@
 
 (defcom-route "/" [] home)
 (defcom-route "/grids" [] grids)
-(defcom-route "/modals/methods" [] modals {:opts {:section m/modal-methods}})
-(defcom-route "/modals/events" [] modals {:opts {:section m/modal-events}})
+(defcom-route "/modals/methods" [] modals {:opts {:section m/methods}})
+(defcom-route "/modals/events" [] modals {:opts {:section m/events}})
 (defcom-route "/forms/layouts" [] forms {:opts {:section f/layouts}})
 (defcom-route "/forms/state" [] forms {:opts {:section f/state}})
 

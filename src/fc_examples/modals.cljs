@@ -1,4 +1,5 @@
 (ns fc-examples.modals
+  (:refer-clojure :exclude [methods])
   (:require [full-control.core :as fc :refer-macros [defpage
                                                      defpanel
                                                      defmodal]]
@@ -19,7 +20,7 @@
                                             (fc/update! cursor :msg "Not okay..."))}
                                "Cancel")))))
 
-(defpanel modal-methods [cursor owner]
+(defpanel methods [cursor owner]
   (render-state [st]
                 ;; inline modal
                 (modal {:id "my-modal"}
@@ -42,7 +43,7 @@
                    (column-6
                     (p (str "Response: " (:msg cursor)))))))))
 
-(defpanel modal-events [cursor owner]
+(defpanel events [cursor owner]
   (init-state []
               {:modal-chs (b/init-chans)
                :event ""})
