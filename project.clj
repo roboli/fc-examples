@@ -11,8 +11,6 @@
 
   :source-paths ["src" "target/classes"]
 
-  :clean-targets ["app/out/fc_examples" "app/out/fc_examples.js"]
-
   :cljsbuild {:builds {:dev {:source-paths ["src"]
                              :compiler {:output-to "app/out/fc_examples.js"
                                         :output-dir "app/out"
@@ -21,6 +19,11 @@
                                         :source-map true}}
                        :prod {:source-paths ["src"]
                               :compiler {:output-to "app/out/fc_examples.js"
-                                         :optimizations :advanced}}}}
+                                         :externs ["externs/bootstrap-externs.js"
+                                                   "externs/jquery-externs.js"
+                                                   "externs/jquery-ui-externs.js"
+                                                   "externs/react-externs.js"]
+                                         :optimizations :advanced
+                                         :pretty-print false}}}}
 
   :clean-targets ["app/out"])
