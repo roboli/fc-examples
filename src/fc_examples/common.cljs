@@ -7,4 +7,5 @@
                 (link {:href "#/"} "Home")
                 (link {:href "#/grids"} "Grids")
                 (link {:href "#/modals/methods"} "Modals")
-                (link {:href "#/forms/layouts"} "Forms")))
+                (link {:href "#/forms/layouts"} "Forms")
+                (link {:href "#/tabs/methods"} "Tabs")))

@@ -5,7 +5,8 @@
             [fc-examples.common :refer [main-menu]]
             [fc-examples.grids :as g :refer [grids]]
             [fc-examples.modals :as m :refer [modals]]
-            [fc-examples.forms :as f :refer [forms]]))
+            [fc-examples.forms :as f :refer [forms]]
+            [fc-examples.tabs :as t :refer [tabs]]))
 
 (enable-console-print!)
 
@@ -24,6 +25,8 @@
 (defcom-route "/modals/events" [] modals {:opts {:section m/events}})
 (defcom-route "/forms/layouts" [] forms {:opts {:section f/layouts}})
 (defcom-route "/forms/state" [] forms {:opts {:section f/state}})
+(defcom-route "/tabs/methods" [] tabs {:opts {:section t/methods}})
+(defcom-route "/tabs/events" [] tabs {:opts {:section t/events}})
 
 (defrouter my-router app-state (. js/document (getElementById "app")))
 
