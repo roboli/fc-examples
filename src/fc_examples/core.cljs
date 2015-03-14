@@ -19,7 +19,10 @@
                  (row
                   (column-12
                    (panel (header (title3 "Welcome"))
-                          (p "Just welcome...")))))))
+                          (p "Demo application using "
+                             (a {:href "https://github.com/roboli/full-control"} "full-control")
+                             " library. You can view the source code "
+                             (a {:href "https://github.com/roboli/fc-examples"} "here."))))))))
 
 (defcom-route "/" [] home)
 (defcom-route "/grids" [] grids)
