@@ -3,26 +3,25 @@
   :url "http://roboli.space/full-control"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2755"]
+                 [org.clojure/clojurescript "0.0-2760"]
                  [full-control "0.1.0-SNAPSHOT"]
                  [org.clojars.roboli/clerk "0.1.0-SNAPSHOT"]]
 
-  :plugins [[lein-cljsbuild "1.0.4"]]
-
-  :source-paths ["src" "target/classes"]
+  :plugins [[lein-cljsbuild "1.0.4-SNAPSHOT"]]
 
   :cljsbuild {:builds {:dev {:source-paths ["src"]
                              :compiler {:output-to "app/out/fc_examples.js"
                                         :output-dir "app/out"
                                         :optimizations :none
-                                        :cache-analysis true
+                                        :asset-path "out"
+                                        :main fc_examples.core
                                         :source-map true}}
                        :prod {:source-paths ["src"]
                               :compiler {:output-to "app/out/fc_examples.js"
+                                         :main fc_examples.core
                                          :externs ["externs/bootstrap-externs.js"
                                                    "externs/jquery-externs.js"
-                                                   "externs/jquery-ui-externs.js"
-                                                   "externs/react-externs.js"]
+                                                   "externs/jquery-ui-externs.js"]
                                          :optimizations :advanced
                                          :pretty-print false}}}}
 
