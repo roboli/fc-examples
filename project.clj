@@ -3,7 +3,7 @@
   :url "http://roboli.space/full-control"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2760"]
+                 [org.clojure/clojurescript "0.0-3058"]
                  [full-control "0.1.0-SNAPSHOT"]
                  [org.clojars.roboli/clerk "0.1.0-SNAPSHOT"]]
 
